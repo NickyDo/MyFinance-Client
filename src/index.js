@@ -5,11 +5,6 @@ import './index.css';
 import configureStore from './redux/store';
 import App from './containers/App'
 
-// setup fake backend
-import { configureFakeBackend } from './helpers/fake-backend';
-
-configureFakeBackend();
-
 ReactDOM.render(
   <Provider store={configureStore()}>
     <App />

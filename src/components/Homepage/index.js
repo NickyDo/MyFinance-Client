@@ -1,18 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { userActions } from '../../redux/actions/userAction';
-
 class HomePage extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(userActions.getAll());
-  }
-
   render() {
     const { user, users } = this.props;
     return (
       <div className="col-md-6 col-md-offset-3">
-        <h1>Hi {user.firstName}!</h1>
+        <h1>Hi {user.email}!</h1>
         <p>You are logged in with React & JWT!!</p>
         <h3>Users from secure api end point:</h3>
         {users.loading && <em>Loading users...</em>}
