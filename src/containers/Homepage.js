@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
-import Homepage from 'components/Homepage'
-import { simpleAction } from 'redux/actions/simpleAction'
+import Homepage from '../components/Homepage'
 
-const mapStateToProps = state => ({
-  ...state,
-})
-const mapDispatchToProps = dispatch => ({
-  simpleAction: () => dispatch(simpleAction()),
-})
+function mapStateToProps(state) {
+  const { users, authentication } = state;
+  const { user } = authentication;
+  return {
+    user,
+    users,
+  };
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Homepage)
+export default connect(mapStateToProps)(Homepage)

@@ -1,26 +1,37 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-class Homepage extends React.PureComponent {
-  simpleAction = () => {
-    this.props.simpleAction();
+import { userActions } from '../../redux/actions/userAction';
+
+class HomePage extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(userActions.getAll());
   }
 
   render() {
+    const { user, users } = this.props;
     return (
-      <div>
-
-        Hello world!
-        <br />
-        {JSON.stringify(this.props)}
-        <button type="button" onClick={this.simpleAction}>Test redux action</button>
+      <div className="col-md-6 col-md-offset-3">
+        <h1>Hi {user.firstName}!</h1>
+        <p>You are logged in with React & JWT!!</p>
+        <h3>Users from secure api end point:</h3>
+        {users.loading && <em>Loading users...</em>}
+        {users.error && <span className="text-danger">ERROR: {users.error}</span>}
+        {users.items && (
+          <ul>
+            {users.items.map(item => (
+              <li key={item.id}>
+                {`${item.firstName} ${item.lastName}`}
+              </li>
+            ))}
+          </ul>
+        )}
+        <p>
+          <Link to="/login">Logout</Link>
+        </p>
       </div>
-    )
+    );
   }
 }
 
-Homepage.propTypes = {
-  simpleAction: PropTypes.func.isRequired,
-}
-
-export default Homepage
+export default HomePage
