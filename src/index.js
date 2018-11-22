@@ -5,9 +5,6 @@ import { Provider } from 'react-redux'
 import './index.css';
 import Homepage from './containers/Homepage'
 import configureStore from './redux/store';
-import 'mdbreact/dist/css/mdb.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
 
 class App extends React.PureComponent {
   render() {

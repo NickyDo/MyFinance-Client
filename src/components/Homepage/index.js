@@ -11,12 +11,12 @@ class Homepage extends React.PureComponent {
   render() {
     return (
       <div>
-          <Navbar />
-          <Sidenav />
-        {/*Hello world!*/}
-        {/*<br />*/}
-        {/*{JSON.stringify(this.props)}*/}
-        {/*<button type="button" onClick={this.simpleAction}>Test redux action</button>*/}
+        <Sidenav />
+        <Navbar />
+        {/* Hello world! */}
+        {/* <br /> */}
+        {/* {JSON.stringify(this.props)} */}
+        {/* <button type="button" onClick={this.simpleAction}>Test redux action</button> */}
       </div>
     )
   }
