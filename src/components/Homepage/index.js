@@ -1,5 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Navbar from '../Navbar/NavbarPage';
+import Sidenav from '../SideNav/SideNavPage';
 
 class Homepage extends React.PureComponent {
   simpleAction = () => {
@@ -9,11 +11,12 @@ class Homepage extends React.PureComponent {
   render() {
     return (
       <div>
-
-        Hello world!
-        <br />
-        {JSON.stringify(this.props)}
-        <button type="button" onClick={this.simpleAction}>Test redux action</button>
+          <Navbar />
+          <Sidenav />
+        {/*Hello world!*/}
+        {/*<br />*/}
+        {/*{JSON.stringify(this.props)}*/}
+        {/*<button type="button" onClick={this.simpleAction}>Test redux action</button>*/}
       </div>
     )
   }
