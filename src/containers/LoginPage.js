@@ -3,8 +3,10 @@ import LoginPage from '../components/LoginPage'
 
 function mapStateToProps(state) {
   const { loggingIn } = state.authentication;
+  const { alert } = state
   return {
     loggingIn,
+    alert,
   };
 }
 
