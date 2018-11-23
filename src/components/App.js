@@ -6,6 +6,7 @@ import { alertActions } from '../redux/actions/alertAction';
 import { PrivateRoute } from './PrivateRoute';
 import HomePage from '../containers/Homepage';
 import LoginPage from '../containers/LoginPage';
+import { AUTH_TYPE } from '../constants/user'
 
 class App extends React.Component {
   constructor(props) {
@@ -22,7 +23,14 @@ class App extends React.Component {
       <Router history={history}>
         <div>
           <PrivateRoute exact path="/" component={HomePage} />
-          <Route path="/login" component={LoginPage} />
+          <Route
+            path="/login"
+            render={() => (<LoginPage authType={AUTH_TYPE.LOGIN} />)}
+          />
+          <Route
+            path="/register"
+            render={() => (<LoginPage authType={AUTH_TYPE.REGISTER} />)}
+          />
         </div>
       </Router>
     );

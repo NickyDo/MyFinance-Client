@@ -2,25 +2,13 @@ import React from 'react';
 import AuthHeader from './header'
 import Intro from './intro'
 import AuthForm from './form'
-import { AUTH_TYPE } from '../../constants/user'
 
 class LoginPage extends React.Component {
-  state = {
-    authType: AUTH_TYPE.REGISTER,
-  }
-
-  changeAuthType = (authType) => {
-    this.setState({
-      authType,
-    })
-  }
-
   render() {
-    const { alert } = this.props;
-    const { authType } = this.state
+    const { alert, authType } = this.props;
     return (<div className="container-fluid">
       <div className="container">
-        <AuthHeader authType={authType} changeAuthType={this.changeAuthType} />
+        <AuthHeader authType={authType} />
       </div>
       <div className="container">
         {alert.message
