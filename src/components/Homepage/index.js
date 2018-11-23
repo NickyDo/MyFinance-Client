@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/NavbarPage';
 import Sidenav from '../SideNav/SideNavPage';
-import { Link } from 'react-router-dom';
+
 const divStyle = {
   marginTop: 0,
   marginRight: 'auto',
@@ -34,7 +35,7 @@ class HomePage extends React.Component {
           <p>
             <Link to="/login">Logout</Link>
           </p>
-      </div>
+        </div>
       </div>
     );
   }

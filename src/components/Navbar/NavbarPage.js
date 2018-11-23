@@ -12,7 +12,9 @@ class NavbarPage extends React.Component {
       isOpen: false,
     };
 
-    toggleCollapse = this.setState({ isOpen: !this.state.isOpen });
+    toggleCollapse = () => {
+      this.setState(state => ({ isOpen: !state.isOpen }));
+    }
 
     render() {
       return (

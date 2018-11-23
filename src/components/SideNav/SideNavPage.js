@@ -3,7 +3,6 @@ import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 class SideNavPage extends React.Component {
-
   render() {
     return (
       <SideNav onSelect={(selected) => {
