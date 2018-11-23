@@ -5,6 +5,7 @@ import {
 import 'mdbreact/dist/css/mdb.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { Link } from 'react-router-dom';
 
 class NavbarPage extends React.Component {
     state = {
@@ -55,10 +56,12 @@ class NavbarPage extends React.Component {
                     <Fa icon="user" />
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-default" right>
-                    <DropdownItem href="#!">Action</DropdownItem>
-                    <DropdownItem href="#!">Another Action</DropdownItem>
-                    <DropdownItem href="#!">Something else here</DropdownItem>
-                    <DropdownItem href="#!">Something else here</DropdownItem>
+                    <DropdownItem>
+                      <Link to="/login">Setting</Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link to="/login">Logout</Link>
+                    </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               </NavItem>
