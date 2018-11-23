@@ -1,24 +1,15 @@
 import React from 'react';
-import SideNav, {
-  Toggle, Nav, NavItem, NavIcon, NavText,
-} from '@trendmicro/react-sidenav';
-
-// Be sure to include styles at some point, probably during your bootstraping
+import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 class SideNavPage extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
 
   render() {
     return (
       <SideNav onSelect={(selected) => {
-        // Add your code here
+        console.log(selected);
       }}
-            >
+      >
         <SideNav.Toggle />
         <SideNav.Nav defaultSelected="home">
           <NavItem eventKey="home">
@@ -32,7 +23,7 @@ class SideNavPage extends React.Component {
               <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
             </NavIcon>
             <NavText>
-                            Charts
+                    Charts
             </NavText>
             <NavItem eventKey="charts/linechart">
               <NavText>
