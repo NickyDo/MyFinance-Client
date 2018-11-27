@@ -1,11 +1,15 @@
 import React from 'react';
 import {
-  Navbar, NavbarNav, NavItem, NavLink, NavbarToggler, Collapse, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Fa,
+  Navbar, NavbarBrand, NavbarNav, NavItem, NavLink, NavbarToggler, Collapse, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Fa,
 } from 'mdbreact';
 import 'mdbreact/dist/css/mdb.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { Link } from 'react-router-dom';
+
+const content = {
+  textAlign: `center`
+}
 
 class NavbarPage extends React.Component {
     state = {
@@ -18,7 +22,10 @@ class NavbarPage extends React.Component {
 
     render() {
       return (
-        <Navbar color="default-color" dark expand="md">
+        <Navbar style={content} color="red" dark expand="md">
+          <NavbarBrand >
+            <strong className="white-text">n</strong>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggleCollapse} />
           <Collapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <NavbarNav right>
