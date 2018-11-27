@@ -39,10 +39,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-config-airbnb": "^17.1.0",
-    "pre-commit": "^1.2.2"
-  },
-  "pre-commit": [
-    "lint"
-  ]
+    "eslint-config-airbnb": "^17.1.0"
+  }
 }

@@ -8,7 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Link } from 'react-router-dom';
 
 const content = {
-  textAlign: `center`
+  textAlign: 'center',
 }
 
 class NavbarPage extends React.Component {
@@ -23,7 +23,7 @@ class NavbarPage extends React.Component {
     render() {
       return (
         <Navbar style={content} color="red" dark expand="md">
-          <NavbarBrand >
+          <NavbarBrand>
             <strong className="white-text">n</strong>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleCollapse} />
